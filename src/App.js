@@ -1,42 +1,46 @@
-import Expenses from './components/Expenses/Expenses';
-import React from 'react';
-import NewExpense from './components/NewExpense/NewExpense';
+import Expenses from "./components/Expenses/Expenses";
+import React from "react";
+import NewExpense from "./components/NewExpense/NewExpense";
+import ExpensesFilter from "./components/ExpensesFilter/ExpensesFilter";
 
 function App() {
   const expenses = [
     {
-      title: 'Oven',
+      title: "Oven",
       amount: 345.66,
-      date: new Date(2022, 1, 1)
+      date: new Date(2022, 1, 1),
     },
     {
-      title: 'Car insurance',
+      title: "Car insurance",
       amount: 234.44,
-      date: new Date(2022, 5, 12)
+      date: new Date(2022, 5, 12),
     },
     {
-      title: 'Cosmetics',
-      amount: 77.50,
-      date: new Date(2022, 6, 12)
+      title: "Cosmetics",
+      amount: 77.5,
+      date: new Date(2022, 6, 12),
     },
     {
-      title: 'gift for husband',
+      title: "gift for sb",
       amount: 100,
-      date: new Date(2022, 7, 28)
-    }
+      date: new Date(2022, 7, 28),
+    },
   ];
 
-  // return React.createElement(
-  //   'div',
-  //   {},
-  //   React.createElement('h2', {}, "Let's get started!"),
-  //   React.createElement(Expenses, {item: expenses})
-  // );
+  var newExpenseArray;
+
+  const addExpenseItemHandler = (expense) => {
+    console.log("in app js");
+    console.log(expenses);
+    console.log(expense);
+    // newExpenseArray = { ...expenses, expense };
+  };
+
   return (
     <div className="App">
-      <NewExpense/>
-      <Expenses item={expenses}/>
-
+      <NewExpense onAddingNewExpenseItem={addExpenseItemHandler} />
+      <ExpensesFilter />
+      <Expenses item={expenses} />
     </div>
   );
 }
