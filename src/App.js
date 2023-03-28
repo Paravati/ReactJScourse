@@ -14,19 +14,19 @@ function App() {
       id: "id2",
       title: "Car insurance",
       amount: 234.44,
-      date: new Date(2022, 5, 12),
+      date: new Date(2023, 5, 12),
     },
     {
       id: "id3",
       title: "Cosmetics",
       amount: 77.5,
-      date: new Date(2022, 6, 12),
+      date: new Date(2021, 6, 12),
     },
     {
       id: "id4",
       title: "gift for sb",
       amount: 100,
-      date: new Date(2022, 7, 28),
+      date: new Date(2020, 7, 28),
     },
   ];
 
