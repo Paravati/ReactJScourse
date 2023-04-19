@@ -42,7 +42,6 @@ function App() {
     console.log("in app js");
     console.log(expenses);
     console.log(expense);
-    // newExpenseArray = { ...expenses, expense };
   };
 
   return (
