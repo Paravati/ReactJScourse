@@ -7,7 +7,7 @@ const ExpenseForm = (props) => {
   const [enteredDate, setEnteredDate] = useState("");
   const { onSaveExpenseData } = props;
   const [addExpenseAccordionOpened, setAddExpenseAccordionOpened] =
-    useState(true);
+    useState(false);
 
   const titleChangeHandler = (event) => {
     setEnteredTitle(event.target.value);
@@ -90,9 +90,7 @@ const ExpenseForm = (props) => {
           <button type="submit" onClick={addData}>
             Add expense
           </button>
-        </div>
-        <div className="new-expense__actions">
-          <button type="submit" onClick={closeAddExpenseAccordion}>
+          <button type="button" onClick={closeAddExpenseAccordion}>
             Close
           </button>
         </div>
@@ -104,7 +102,7 @@ const ExpenseForm = (props) => {
     <form onSubmit={submitHandler}>
       <div className="new-expense__actions">
         <button type="submit" onClick={addData}>
-          Add expense
+          Add new expense
         </button>
       </div>
     </form>
